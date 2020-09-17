@@ -9,7 +9,7 @@ void Attack::atck(Player akt, Player kovetkezo) {
 	int i = 0;
 	while (akt.getHp() > 0 && kovetkezo.getHp() > 0) {
 		if (i % 2 == 0) {
-			cout << akt.getName() << " . " << kovetkezo.getName() << endl;
+			cout << akt.getName() << " -> " << kovetkezo.getName() << endl;
 			cout << akt.getName() << ": Hp: " << akt.getHp() << ", Dmg: " << akt.getDmg() << endl;
 			if(kovetkezo.getHp() < 0)
 				kovetkezo.setHp(0);
@@ -17,7 +17,7 @@ void Attack::atck(Player akt, Player kovetkezo) {
 			cout << kovetkezo.getName() << ": Hp: " << kovetkezo.getHp() << ", Dmg: " << kovetkezo.getDmg() << endl;
 		}
 		else {
-			cout << kovetkezo.getName() << " . " << akt.getName() << endl;
+			cout << kovetkezo.getName() << " -> " << akt.getName() << endl;
 			akt.setHp(akt.getHp() - kovetkezo.getDmg());
 			if (akt.getHp() < 0)
 				akt.setHp(0);
